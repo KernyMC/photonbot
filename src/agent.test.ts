@@ -50,7 +50,7 @@ describe('direct chats', () => {
     await a.handle(s, msg('hey', { sender: { id: 'g1' } }));
     await a.handle(s, msg('help', { sender: { id: 'g2' } }));
     expect(calls).toHaveLength(0);
-    expect(s.sent[0]).toContain('Flakey');
+    expect(s.sent[0]).toContain('Benny the Penny');
   });
   it('falls back politely when the brain is down', async () => {
     reply = null;
@@ -78,7 +78,7 @@ describe('group chats and safety', () => {
     const a = make(); const s = space('G', 5);
     await a.handle(s, msg('lunch at noon?'));
     expect(s.sent).toHaveLength(0);
-    await a.handle(s, msg('Flakey, who is flaking the most?', { sender: { id: 'u2' } }));
+    await a.handle(s, msg('Benny the Penny, who is flaking the most?', { sender: { id: 'u2' } }));
     expect(s.sent).toEqual(['Kevin, obviously.']);
     expect(calls[0]!.message).toBe('who is flaking the most?');
   });
@@ -94,7 +94,7 @@ describe('group chats and safety', () => {
     const a = make(() => t); const s = space();
     for (let i = 0; i < 12; i++) { t += 100; await a.handle(s, msg(`question ${i}`)); }
     expect(calls).toHaveLength(8);
-    expect(s.sent.filter((x) => x.includes('one small snowflake'))).toHaveLength(1);
+    expect(s.sent.filter((x) => x.includes('one small penny'))).toHaveLength(1);
     t += 61_000;
     await a.handle(s, msg('later'));
     expect(calls).toHaveLength(9);

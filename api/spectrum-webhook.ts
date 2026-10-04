@@ -63,5 +63,5 @@ export async function POST(req: Request): Promise<Response> {
 
 /** Health check: open the URL in a browser to see that the function is deployed. */
 export function GET(): Response {
-  return Response.json({ ok: true, agent: 'Flakey on iMessage', webhook: 'POST /api/spectrum-webhook' });
+  return Response.json({ ok: true, agent: 'Benny the Penny on iMessage', webhook: 'POST /api/spectrum-webhook' });
 }

@@ -20,15 +20,15 @@ export interface AgentDeps {
   now?: () => number;
 }
 
-export const NAME = /\b(flakey|squad\s?bot|shamepool)\b/gi;
+export const NAME = /\b(benny(?:\s+the\s+penny)?|flakey|squad\s?bot|shamepool)\b/gi;
 const MAX_TEXT = 400;
 const RATE_PER_MINUTE = 8;
 const HISTORY = 6;
 
-const HELP = 'I\'m Flakey, the Squad Bot of ShamePool. Ask me who is flaking, who is winning, or how close the pool is. In group chats, say my name.';
+const HELP = 'I\'m Benny the Penny, the Squad Bot of ShamePool. Ask me who is flaking, who is winning, or how close the pool is. In group chats, say my name.';
 const BRAIN_DOWN = 'My brain froze for a second. Try me again.';
 const ONLY_TEXT = 'I only read text here. Photo check-ins live in the ShamePool app.';
-const SLOW_DOWN = 'Easy there, I am one small snowflake. Give me a minute.';
+const SLOW_DOWN = 'Easy there, I am one small penny. Give me a minute.';
 const PENALTY_IN_APP = 'Penalty changes need a tap in the ShamePool app. Open it and ask me there.';
 
 export class Agent {

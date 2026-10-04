@@ -4,7 +4,7 @@ import { Agent, type AgentMessage, type AgentSpace } from './agent';
 import { makeBrain } from './brain';
 import { demoContext } from './demoContext';
 
-// Flakey on iMessage: the same Squad Bot brain as the ShamePool app (its /api/ai/chat route),
+// Benny the Penny on iMessage: the same Squad Bot brain as the ShamePool app (its /api/ai/chat route),
 // reachable from a phone number. Docs: https://photon.codes/docs/spectrum-ts
 const projectId = process.env.PROJECT_ID;
 const projectSecret = process.env.PROJECT_SECRET;
@@ -23,7 +23,7 @@ if (process.env.SPECTRUM_TERMINAL) {
 }
 
 const app = await Spectrum({ projectId, projectSecret, providers: providers as never });
-console.log(`Flakey is listening. Brain: ${baseUrl}`);
+console.log(`Benny the Penny is listening. Brain: ${baseUrl}`);
 
 for await (const [space, message] of app.messages) {
   // do not await: one slow answer must not block the next conversation
